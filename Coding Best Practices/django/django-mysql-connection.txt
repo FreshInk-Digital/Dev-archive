@@ -1,0 +1,34 @@
+USAGE OF "pymysql" CONNECTOR:
+install in virtualenv "pipenv"
+Step 1:
+In terminal, in the directory of the Django project, install PyMySQL.
+if you are using a virtual environment.
+pipenv install pymysql 
+
+if you are not using a virtual environment.
+pip install pymysql
+
+Step 2:
+Go to the project’s __init__.py file and add the code below.
+import pymysql
+pymysql.install_as_MySQLdb()
+
+Step 3:
+Go to the project’s settings.py file and change the DATABASES to something similar to the following.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'name_of_the_database',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'your_mysql_password'
+    }
+}
+
+Step 4:
+In terminal, in the directory of the Django project:
+1- Make migrations with “python manage.py makemigrations”.
+2- Then migrate the change with “python manage.py migrate”.
+
+Step 5:
+You might want to secure your MySQL password instead of just typing it there, visible for any potential collaborators. However, that is not the topic of this post.
