@@ -1,0 +1,29 @@
+#ISSUE: Permission denied (publickey).
+
+Step-by-Step Troubleshooting
+1. Verify SSH Key is Added to the Agent:
+eval "$(ssh-agent -s)"
+
+2. Add your key to the agent:
+ssh-add ~/.ssh/id_rsa
+Replace ~/.ssh/id_rsa with the path to your private SSH key if it’s named differently.
+
+3. Confirm the key is added:
+ssh-add -l
+
+OTHER STEPS - Verify Correct SSH Key is in Use
+1. Create or edit your SSH config file
+nano ~/.ssh/config
+
+add this configuration:
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
+Test connection:
+ssh -T git@github.com
+
+
+

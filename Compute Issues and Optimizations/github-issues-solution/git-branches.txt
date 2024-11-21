@@ -1,0 +1,44 @@
+# working with branches git/github
+
+1. create a branch
+git branch <name_branch>
+
+2. show all branches
+git branch -a
+
+3. switch btn branches
+git checkout <name_branch>
+
+4. delete merged branch
+git branch -d <name_branch>
+
+5. delete unmerged branch
+git branch -D <name_branch>
+
+6. create & switch to a create branch
+git checkout -b <name_branch>
+
+7. merging branch to main branch
+- first you need to be in the branch you want to merge into
+git merge <name_branch_merged_in>
+
+8. push branch
+git push origin <name_branch>
+
+9. clone project with all branches
+To clone a GitHub repository along with all its branches, use the following command:
+git clone --mirror <repository-url>
+
+OR
+
+Alternatively, if you want to clone the repository normally (not as a mirror) and access all branches locally:
+git clone <repository-url>
+cd <repository-directory>
+git fetch --all
+
+ISSUE CLONE:
+Check all remote branches
+git branch -r
+
+If the branch exists on the remote but isn't set up locally, check it out:
+git checkout <name_branch>

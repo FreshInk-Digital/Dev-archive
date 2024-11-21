@@ -19,7 +19,7 @@ A central place for computing solutions. This repository contains various comput
 - **Solution 5: Security Best Practices**
   - Solutions and recommendations for improving security in software systems, including encryption techniques, secure coding practices, vulnerability management, and protection against common exploits.
 
-- **Solution 6: [Any other topic you want to include]**
+- **Solution 6: [Any other topic]**
   - [Description of other topics like algorithms, system architecture, etc.]
 
 Feel free to explore the solutions, contribute, or open issues for further discussions and improvements.
