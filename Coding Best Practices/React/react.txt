@@ -1,0 +1,31 @@
+Step 1: Create the React App
+Run the following commands in your terminal:
+npx create-react-app <name_app>
+cd name_app
+
+
+Step 2: Install Chakra UI
+Install Chakra UI and its peer dependencies:
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+
+Step 3: Configure Chakra UI
+Open the project in your code editor.
+
+In the src directory, locate index.js.
+
+Wrap the app with Chakra’s ChakraProvider:
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ChakraProvider } from '@chakra-ui/react';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <ChakraProvider>
+    <App />
+  </ChakraProvider>
+);
+
+
+
