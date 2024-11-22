@@ -1,0 +1,17 @@
+--------------------   Connecting Mariadb server to phpmyadmin  -------------------
+
+*Log in to MariaDB as the root user:
+    sudo mysql -u root -p
+
+*Create the user: 
+    CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+
+*Grant all privileges:
+    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
+
+*Flush privileges:
+    FLUSH PRIVILEGES;
+
+*Verify the User
+    SELECT User, Host FROM mysql.user WHERE User = 'username';
+

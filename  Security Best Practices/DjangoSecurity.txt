@@ -1,0 +1,44 @@
+--------------  Seciring Django Sites Before Deploying  -------------------------
+
+*Check for the Security Status of the site
+ python manage.py check --deploy    
+
+# For xss prevention
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+
+# Secure SSL redirect
+SECURE_SSL_REDIRECT = True
+>Redirects all non https requests to http
+
+# X-Frame-Options Header
+X_FRAME_OPTIONS = 'DENY'
+
+# Session Settings
+SESSION_COOKIE_AGE = 1800  # 1 hour
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+
+
+# csrf protection
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+# http Strict Transport Security
+SECURE_HSTS_SECONDS = 86400  # 1 day
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+
+
+sites
+*https://developer.mozilla.org/
+https://observatory.mozilla.org/?ref=cloudwithdjango.com
+securisite check
+https://www.ssltrust.com.au/ssl-tools/website-security-check
+ https://sitecheck.sucuri.net/
+https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+
+link
+https://www.cloudwithdjango.com/the-best-third-party-tools-to-utilize-for-django-deployment/
