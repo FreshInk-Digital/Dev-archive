@@ -1,0 +1,18 @@
+Meta Tags: Sniplets of text that describes a pages content
+
+
+Installation:
+    npm i react-helmet
+
+In the return section:
+    <Helmet>
+        <title>Ravi Ariv - Home</title>
+        <meta
+          name="description"
+          content="Join the Ravi Ariv Institute and embrace Service Above Self with our free learning resources. Discover tax laws, advisory services, and capacity development for community betterment"
+        />
+        <meta
+          name="keywords"
+          content=" Ravi, Ravi Ariv Institute, ravimoova, tax, Tanzania tax consultant, Tanzania tax, Tax Health Check, Capacity Development, Tax exemption, Tax Judgments "
+        />
+      </Helmet>
